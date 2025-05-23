@@ -18,3 +18,6 @@ Route::get('/admin', function () {
 Route::get('/client', function () {
     return view('client/landing-page-client');
 });
+Route::get('/dashboard', function () {
+    return view('client/dashboard');
+});

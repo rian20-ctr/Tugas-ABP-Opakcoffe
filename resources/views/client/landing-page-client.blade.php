@@ -65,7 +65,7 @@
         <div class="col">
           <h1 class="fw-bold typo1">Enjoy Your</h1>
           <h1 class="fw-bold typo2">Coffe</h1>
-          <a href="index.html"><button class="btn btn-lg rounded-1 me-2 btn-1">Pesan Sekarang!</button></a>
+          <a href="dashboard"><button class="btn btn-lg rounded-1 me-2 btn-1">Pesan Sekarang!</button></a>
           <a href="#about"><button class="btn btn-outline-light btn-lg rounded-1 btn-2">About</button></a>
         </div>
       </div>
