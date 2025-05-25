@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -51,7 +55,7 @@
                         <a class="nav-link active mx-3" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active mx-3" aria-current="page" href="#about">Cart</a>
+                        <a class="nav-link mx-3" aria-current="page" href="/allmenu">All Menu</a>
                     </li>
 
             </div>
@@ -132,15 +136,15 @@
             <div class="rekomendasi-container">
                 <!-- Item 1 -->
                 <div class="rekomendasi-item">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <figure>
-                        <img src="/Asset/about/kopi1.jpg" alt="Assorted pastries and desserts">
-                    </figure>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#menuModal">
+                        <figure>
+                            <img src="/Asset/about/kopi1.jpg" alt="Assorted pastries and desserts">
+                        </figure>
 
-                    <div class="menu-info">
-                        <h3>Assorted Pastries</h3>
-                        <p class="price">Rp 35.000</p>
-                    </div>
+                        <div class="menu-info">
+                            <h3>Assorted Pastries</h3>
+                            <p class="price">Rp 35.000</p>
+                        </div>
                     </a>
                 </div>
 
@@ -377,27 +381,84 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="menuModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    
+                    <h5 class="modal-title">Pilih Coffee Latte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
+
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="img-menu">
+                        <img src="Asset/about/kopi1.jpg" class="img-thumbnail" alt="...">
+                        <div class="info-menu">
+                            <div class="nama-menu">Coffe Latte</div>
+                            <div class="harga-menu">15.000</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="deskripsi-menu">
+                        <h6>Suhu & Ukuran</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="size" id="cold1" value="Cold Regular">
+                            <label class="form-check-label" for="cold1">Cold Regular</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="size" id="cold2" value="Cold Medium"
+                                checked>
+                            <label class="form-check-label" for="cold2">Cold Medium</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="size" id="cold3" value="Cold Large">
+                            <label class="form-check-label" for="cold3">Cold Large</label>
+                        </div>
+
+                        <hr>
+                        <h6>Gula</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sugar" id="sugar1" value="No Sugar">
+                            <label class="form-check-label" for="sugar1">No Sugar</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sugar" id="sugar2" value="Normal Sugar"
+                                checked>
+                            <label class="form-check-label" for="sugar2">Normal Sugar</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="sugar" id="sugar3" value="Extra Sugar">
+                            <label class="form-check-label" for="sugar3">Extra Sugar</label>
+                        </div>
+                    </div>
+                    <div class="aksi">
+                        <div class="d-flex align-items-center mb-3">
+                            <button class="btn me-2" onclick="decrement()"><i class="bi bi-dash-circle"></i></button>
+                            <span id="counter">1</span>
+                            <button class="btn ms-2" onclick="increment()"><i class="bi bi-plus-circle-fill"></i></button>
+                        </div>
+                    </div>
+
+                    <button class="btn w-100" style="background-color: #38220f;color: #ece0d1;"onclick="addToCart()">Tambah ke Keranjang</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="cart-icon">
+        <a href="/cart" class="btn position-relative">
+            <i class="bi bi-cart3"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                id="cartBadge">0</span>
+        </a>
+    </div>
 
 
+    <footer>
+        <p> &copy; 2025 Opak Coffe. All rights reserved.</p>
+    </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('Javascript/dashboard.js') }}"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

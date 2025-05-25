@@ -1,0 +1,126 @@
+body {
+  font-family: poppins, sans-serif;
+  background-color: var(--body);
+  height: 2000px;
+}
+
+/* Navbar */
+.navbar .navbar-brand {
+  font-family: "Oswald", sans-serif;
+}
+
+.navbar .container .nav-item a {
+  font-size: 20px;
+}
+
+.navbar .container .nav-item a:hover {
+  color: var(--coffe);
+}
+
+/* footer */
+footer{
+  background-color: var(--navbar);
+  margin-top: 50px;
+  padding-block: 5px;
+  box-sizing: border-box;
+}
+footer p{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: var(--font-opak);
+}
+
+/* Menu */
+main .content{
+  margin-top: 100px;
+  background-color: rgba(99,72,50, 0.7);
+  margin-inline: 50px;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+.menu-item{
+  margin-top: 20px;
+}
+tbody tr td.nomor{
+  line-height: 130px;
+}
+tbody tr td.namaMenu{
+  line-height: 130px;
+}
+tbody tr td.hargaMenu{
+  line-height: 130px;
+}
+tbody tr td.aksiMenu{
+  line-height: 115px;
+}
+.aksiMenu button i{
+  font-size: 1.5rem;  
+}
+
+/* Modal */
+.modal .modal-body img{
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  
+}
+.info-menu{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.deskripsi-menu h6{
+  font-size: 1.4rem;
+}
+.deskripsi-menu, .nama-menu{
+  margin-inline: 10px;
+  color: var(--coklat5);
+
+}
+.aksi{
+  display: flex;
+  justify-content: center;
+}
+.aksi i{
+  font-size: 25px;
+  color: var(--navbar);
+}
+.aksi span{
+  font-size: 25px;
+  color: var(--navbar);
+  font-weight: bold;
+}
+.counter-value{
+  margin-top: 3px;
+}
+.container-cart{
+  display: flex;
+  justify-content: center;
+}
+.go-cart{
+  width: 100px;
+  height: 35px;
+  background-color: var(--navbar);
+  color: var(--font-opak);
+  border-radius: 20px;
+  justify-content: center;
+}
+.cart-icon{
+  position: fixed;
+      bottom: 50px;
+      right: 50px;
+}
+.cart-icon .btn{
+  background-color: #3e2723;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.cart-icon .btn i{
+  font-size: 40px;
+  color: var(--font-opak);
+}

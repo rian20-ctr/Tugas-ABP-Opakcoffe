@@ -1,0 +1,38 @@
+body{
+    background-color:#634832;
+}
+.form-data{
+    background-color: #ece0d1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+h2{
+    color: #ece0d1;
+    margin-bottom: 20px;
+}
+.form-data input, .form-data select {
+  border: 2px solid var(--navbar);
+  border-radius: 20px;
+}
+#emptyCart{
+    color: var(--font-opak);
+    font-size: 2rem;
+}
+.btn{
+    background-color: #38220f ;
+    border: 1px solid #ece0d1;
+}
+#cartSummary{
+    margin-bottom: 50px;
+}
+#cartSummary button{
+    color: var(--font-opak);
+}
+#cartSummary button:hover{
+    border: 2px solid #ece0d1;
+    color: #ece0d1;
+}
+#cartSummary #totalPrice{
+    color: var(--font-opak);
+}

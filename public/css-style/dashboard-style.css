@@ -23,6 +23,57 @@ body {
   padding-inline: 100px;
 }
 
+/* Modal */
+.modal .modal-body img{
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  
+}
+.info-menu{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.deskripsi-menu h6{
+  font-size: 1.4rem;
+}
+.deskripsi-menu, .nama-menu{
+  margin-inline: 10px;
+  color: var(--coklat5);
+
+}
+.aksi{
+  display: flex;
+  justify-content: center;
+}
+.aksi i{
+  font-size: 25px;
+  color: var(--navbar);
+}
+.aksi span{
+  font-size: 25px;
+  color: var(--navbar);
+  font-weight: bold;
+}
+.counter-value{
+  margin-top: 3px;
+}
+.container-cart{
+  display: flex;
+  justify-content: center;
+}
+.go-cart{
+  width: 100px;
+  height: 35px;
+  background-color: var(--navbar);
+  color: var(--font-opak);
+  border-radius: 20px;
+  justify-content: center;
+}
+
 
 
 /* Promotion */
@@ -106,6 +157,10 @@ h2 {
         margin: 0;
     }
 
+
+    .cart-page {
+            display: none;
+        }
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .rekomendasi-item {
@@ -148,10 +203,6 @@ h2 {
   padding: 15px;
 }
 
-/* All-menu */
-.all-menu a:hover {
-  background-color: white;
-}
 
 /* Recomendasi */
 .recomendasi {
@@ -219,10 +270,37 @@ h2 {
   border-radius: 12px;
 }
 
-
+.cart-icon{
+  position: fixed;
+      bottom: 50px;
+      right: 50px;
+}
+.cart-icon .btn{
+  background-color: #3e2723;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.cart-icon .btn i{
+  font-size: 40px;
+  color: var(--font-opak);
+}
 
 /* footer */
+footer{
+  background-color: var(--navbar);
+  margin-top: 50px;
+  padding-block: 5px;
+  box-sizing: border-box;
 
+  bottom: 0;
+}
+footer p{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: var(--font-opak);
+}
 
 /* Responsive */
 @media (max-width: 1400px) {
